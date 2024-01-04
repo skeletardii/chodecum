@@ -8,7 +8,7 @@ Item 1
 4. Which feature allows you to define concise function expressions without using the function keyword?
     -Arrow functions
 5. Which operator allows you to combine elements of arrays or objects into a new array or object?
-    -Rest operations
+    -Spread operator
 
 Item 2
 1. What does the rest operator do in function parameter handling?
@@ -21,5 +21,3 @@ Item 2
     -The function is executed with the default parameter values.
 5. How can you use the shorthand property names in an object literal?
     -By assigning values directly to the property names.
-
-I got 16/20 here so 2 of these are wrong i think one of them is item 2 number 1 idk
