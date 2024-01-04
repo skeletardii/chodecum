@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Class Example</title>
+    <style>
+        .hot {
+            color: red;
+        }
+        
+        .cool {
+            color: blue;
+        }
+
+    </style>
+    <script>
+        function updateTemperatureClass() {
+        var temperatureInput = document.getElementById("temperature");
+        var temperatureValue = parseFloat(temperatureInput.value);
+        if (!isNaN(temperatureValue)) {
+            if (temperatureValue >= 30) {
+                temperatureInput.className = "hot";
+            } else {
+                temperatureInput.className = "cool";
+            }
+        }
+        }
+
+    </script>
+</head>
+<body>
+
+    <label for="temperature">Temperature:</label>
+    <input type="text" id="temperature"  name="temperature" oninput="updateTemperatureClass()">
+    <input type="text" class="cool">
+    <input type="text" class="hot">
+</body>
+</html>

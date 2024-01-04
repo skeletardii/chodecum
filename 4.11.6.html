@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Classes Example</title>
+    <style>
+        .red {
+            background-color: red;
+        }
+
+        .border {
+            border: 1px solid black;
+        }
+    </style>
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <div id="myDiv"onclick="toggleClasses()">This is a div.</div>
+
+    <script>
+        function toggleClasses() {
+            var divElement = document.getElementById("myDiv");
+            divElement.classList.toggle("red");
+            divElement.classList.toggle("border");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strike-Through Text Example</title>
+    <style>
+        .strike {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="myText">This is a paragraph.</p>
+    <label for="toggleCheckbox">Apply Strike:</label>
+    <input type="checkbox" id="toggleCheckbox" onchange="toggleStrike()">
+
+    <script>
+        function toggleStrike() {
+            var paragraph = document.getElementById("myText");
+            var checkbox = document.getElementById("toggleCheckbox");
+
+            if (!checkbox.checked) {
+                paragraph.className="strike";
+            } else {
+                paragraph.className="";
+            }
+        }
+    </script>
+
+</body>
+</html>
