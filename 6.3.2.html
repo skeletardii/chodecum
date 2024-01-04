@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .nav-item {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            border: 1px solid black;
+            flex-basis:auto;
+        }
+
+        @media screen and (max-width: 800px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .nav-item {
+                flex-basis: auto;
+            }
+        }
+        @media screen and (min-width: 800px) {
+            .navbar {
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+            .nav-item {
+                flex-basis: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-item">Home</div>
+        <div class="nav-item">About</div>
+        <div class="nav-item">Services</div>
+        <div class="nav-item">Contact</div>
+    </nav>
+
+</body>
+</html>

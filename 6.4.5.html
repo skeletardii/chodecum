@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Grid Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 188.5px 188.5px 188.5px 188.5px;
+            grid-template-rows: repeat(4, 1fr);
+            gap: 10px;
+            width: 80%;
+            margin: auto;
+        }
+
+        .item {
+            border: 1px solid black;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .item1 {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+
+        .item2 {
+            grid-row: span 2;
+        }
+
+        .item3 {
+            grid-column: span 2;
+        }
+
+        .item4 {
+            grid-row: span 3;
+        }
+
+        .item5 {
+            grid-column: span 2;
+        }
+
+        .item6 {
+            grid-row: span 3;
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item item1">Item 1</div>
+        <div class="item item2">Item 2</div>
+        <div class="item item3">Item 3</div>
+        <div class="item item4">Item 4</div>
+        <div class="item item5">Item 5</div>
+        <div class="item item6">Item 6</div>
+    </div>
+
+</body>
+</html>

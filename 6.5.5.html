@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Grid Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 148.391px 148.41px 148.391px 148.41px 148.41px;
+            grid-template-rows: 100px 20px 100px;
+            gap: 10px;
+            width: 100vw;
+            height: 100vh;
+            border: 1px solid black;
+        }
+
+        .header, .footer {
+            border: 1px solid black;
+            grid-column: span 5;
+            padding: 10px;
+            background-color: lightgray;
+            text-align: center;
+        }
+        .header{
+            grid-row-end: 2;
+            grid-row-start: 1;
+            grid-column-end: 6;
+            grid-column-start: 1;
+        }
+        .footer{
+            grid-row-end: 4;
+            grid-row-start: 3;
+            grid-column-end: 6;
+            grid-column-start:1;
+        }
+
+        .sidebar {
+            border: 1px solid black;
+            grid-column: span 2;
+            grid-row: span 1;
+            grid-column-start: 1;
+            padding: 10px;
+            background-color: lightblue;
+            grid-row-end: 3;
+            grid-row-start: 2;
+            grid-column-end: 3;
+        }
+
+        .content {
+            border: 1px solid black;
+            grid-column: span 3;
+            grid-row: span 1;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-end: 6;
+            padding: 10px;
+            background-color: lightgreen;
+            grid-template-rows: 100px 20px 100px;
+            grid-column-start: 3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="content">Content</div>
+        <div class="footer">Footer</div>
+    </div>
+
+</body>
+</html>

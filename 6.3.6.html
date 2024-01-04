@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            border: 1px solid black;
+            display: flex;
+            width: 100%;
+                align-items: center;
+            justify-content:center;
+        }
+
+        .box {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .box3 {
+            flex-grow: 1;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box box3">Box 3</div>
+    </div>
+
+</body>
+</html>
