@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Link Example</title>
+</head>
+<body>
+
+    <a id="linkElement" href="https://example.com">Visit Example Website</a>
+    <button onclick="updateLink()">Update Link</button>
+
+    <script>
+        function updateLink() {
+            var linkElement = document.getElementById("linkElement");
+            linkElement.href = "https://newwebsite.com";
+            linkElement.innerText = "Visit New Website";
+        }
+    </script>
+
+</body>
+</html>

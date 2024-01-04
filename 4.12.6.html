@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Link Example</title>
+</head>
+<body>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <button onclick="generateLink()">Generate Link</button>
+
+    <div id="linkContainer"></div>
+
+    <script>
+        function generateLink() {
+            var usernameInput = document.getElementById("username");
+            var username = usernameInput.value.trim();
+
+            if (username !== "") {
+                var linkContainer = document.getElementById("linkContainer");
+                var linkElement = document.createElement("a");
+                linkElement.href = "https://www.example.com/user/" + encodeURIComponent(username);
+                linkElement.textContent = "Go to "+ username +"'s profile";
+
+                linkContainer.innerHTML = ""; // Clear previous content
+                linkContainer.appendChild(linkElement);
+            } else {
+                alert("Please enter a username.");
+            }
+        }
+    </script>
+
+</body>
+</html>

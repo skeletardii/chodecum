@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Class Example</title>
+    <style>
+        .class1 {
+            background-color: lightblue;
+        }
+
+        .class2 {
+            background-color: lightgreen;
+        }
+    </style>
+    <script>
+        function toggleClass() {
+            var divElement = document.getElementById("myDiv");
+
+            if (divElement.classList.contains("class1")) {
+                divElement.classList.remove("class1");
+                divElement.classList.add("class2");
+            } else {
+                divElement.classList.remove("class2");
+                divElement.classList.add("class1");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div id="myDiv" class="class1">This is a div.</div>
+    <button onclick="toggleClass()">Toggle Class</button>
+
+</body>
+</html>

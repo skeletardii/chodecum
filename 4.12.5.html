@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image Source Example</title>
+</head>
+<body>
+
+    <img id="galleryImage" src="image1.jpg" alt="Displayed Image">
+    
+    <ul>
+        <li><a href="#" onclick="changeImage('image1.jpg')">Image 1</a></li>
+        <li><a href="#" onclick="changeImage('image2.jpg')">Image 2</a></li>
+        <li><a href="#" onclick="changeImage('image3.jpg')">Image 3</a></li>
+        <li><a href="#" onclick="changeImage('image4.jpg')">Image 4</a></li>
+    </ul>
+
+    <script>
+        function changeImage(newSource) {
+            var imageElement = document.getElementById("galleryImage");
+            imageElement.src = newSource;
+        }
+    </script>
+
+</body>
+</html>

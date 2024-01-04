@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image Source Example</title>
+</head>
+<body>
+
+    <img id="imageElement" src="image1.jpg" alt="Image 1">
+    <button onclick="changeImageSource()">Change Image</button>
+
+    <script>
+        function changeImageSource() {
+            var imageElement = document.getElementById("imageElement");
+            
+            if (imageElement.src.endsWith("image1.jpg")) {
+                imageElement.src = "image2.jpg";
+            } else {
+                imageElement.src = "image1.jpg";
+            }
+        }
+    </script>
+
+</body>
+</html>
