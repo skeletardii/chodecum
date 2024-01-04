@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Color on Hover</title>
+    <style>
+        #hoverParagraph {
+            transition: color 0.5s;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="paragraph" onmouseover="changeColor()" onmouseout="resetColor()">This is a paragraph. Hover over me to change the text color to green.</p>
+
+    <script>
+        function changeColor() {
+            document.getElementById("paragraph").style.color = "green";
+        }
+
+        function resetColor() {
+            document.getElementById("paragraph").style.color = "";
+        }
+    </script>
+
+</body>
+</html>

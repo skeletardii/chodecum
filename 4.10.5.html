@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increase Padding and Margin</title>
+    <style>
+        #changeBox {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            transition: margin 0.5s, padding 0.5s;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="divToChange">This is a div. Click the buttons to increase padding or margin.</div>
+    <button id="increasePadding" onclick="increasePadding()">Increase Padding</button>
+    <button id="increaseMargin" onclick="increaseMargin()">Increase Margin</button>
+
+    <script>
+        function increasePadding() {
+            var box = document.getElementById("divToChange");
+            var currentPadding = parseInt(window.getComputedStyle(box).padding);
+            box.style.padding = (currentPadding + 10) + "px";
+        }
+
+        function increaseMargin() {
+            var box = document.getElementById("divToChange");
+            var currentMargin = parseInt(window.getComputedStyle(box).margin);
+            box.style.margin = (currentMargin + 10) + "px";
+        }
+    </script>
+
+</body>
+</html>

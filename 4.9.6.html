@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Username Form</title>
+    <style>
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="userForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" oninput="validateUsername()">
+        <br>
+        <span id="error" class="error-message"></span>
+    </form>
+
+    <script>
+        function validateUsername() {
+            var username = document.getElementById("username").value;
+
+            if (username.length < 6) {
+                document.getElementById("error").innerText = "Username must be at least 6 characters long";
+            } else {
+                document.getElementById("error").innerText = "";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms Agreement Form</title>
+    <style>
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="userForm" onsubmit="validateForm()">
+        <label for="agreeTerms">Agree to Terms:</label>
+        <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+        <br>
+        <span id="error" class="error-message"></span>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm() {
+            var agreeTermsCheckbox = document.getElementById("agreeTerms");
+            
+            if (!agreeTermsCheckbox.checked) {
+                document.getElementById("error").innerText = "You must agree to the terms.";
+                event.preventDefault();
+            } else {
+                document.getElementById("error").innerText = "";
+            }
+        }
+    </script>
+
+</body>
+</html>

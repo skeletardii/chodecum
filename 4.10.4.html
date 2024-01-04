@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Border on Click</title>
+    <style>
+    </style>
+</head>
+<body>
+
+    <p id="paragraph">This is a paragraph. Click the button to add a red border.</p>
+    <button id="styleButton" onclick="addRedBorder()">Add Red Border</button>
+    <div id="divToChange"></div>
+    <script>
+        function addRedBorder() {
+            var paragraph = document.getElementById("paragraph");
+            paragraph.style.border = "5px solid red";
+            paragraph.style.borderTopWidth = "5px";
+        }
+    </script>
+
+</body>
+</html>
