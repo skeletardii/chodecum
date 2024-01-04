@@ -12,7 +12,7 @@ Item 1
 
 Item 2
 1. What does the rest operator do in function parameter handling?
-    -It collects multiple function arguments into an array.
+    -It collects multiple function arguments into an array. (1st one)
 2. What is the purpose of using the rest operator in the following function definition?
     -It returns the sum of all the numbers passed to the function.
 3. Which ES6 feature allows you to specify default values for function parameters?
