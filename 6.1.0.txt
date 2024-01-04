@@ -1,0 +1,13 @@
+Item 1:
+1. adapt
+2. enhanced
+3. consistent
+4. control
+5. screen
+
+Item 2:
+1. width
+2. meta description (???)
+3. adjusts
+4. adapt
+5. maxwidth of the container to 600px on screens 768px or smaller

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            border: 1px solid black;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #333;
+            border: 1px solid black;
+        }
+
+        .flex-item {
+            flex: 1;
+            color: #fff;
+            border: 1px solid black;
+        }
+        @media screen and (max-width: 800px) {
+            footer {
+                flex-direction: column;
+                gap:20px;
+                align-items: center;
+                    justify-content: space-between;
+            }
+        }
+        @media screen and (min-width: 800px) {
+            footer {
+                flex-direction: row;
+                gap:20px;
+                align-items: center;
+                    justify-content: space-between;
+            }
+        }
+    </style>
+    <title>Responsive Footer</title>
+</head>
+<body>
+
+    <footer class="flex-container">
+        <div class="about-us flex-item">
+            <h3>About Us</h3>
+        </div>
+        <div class="contact-us flex-item">
+            <h3>Contact Us</h3>
+        </div>
+        <div class="social-links flex-item">
+            <h3>Social Links</h3>
+        </div>
+    </footer>
+
+</body>
+</html>

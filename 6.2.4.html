@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            border: 1px solid black;
+        }
+
+        .flex-item {
+            background-color: #3498db;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            width: 100px; /* Adjust as needed */
+            margin: 10px;
+            border: 1px solid black;
+        }
+
+        #item1 {
+            align-self: flex-start;
+        }
+
+        #item2 {
+            align-self: center;
+        }
+
+        #item3 {
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="flex-container" class="flex-container">
+        <div id="item1" class="flex-item">Start</div>
+        <div id="item2" class="flex-item">Center</div>
+        <div id="item3" class="flex-item">End</div>
+    </div>
+
+</body>
+</html>
