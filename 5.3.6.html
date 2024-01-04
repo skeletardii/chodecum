@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Reversal and Equality Checker</title>
+</head>
+<body>
+
+    <form id="stringForm">
+        <label for="string1">Enter the first string:</label>
+        <input type="text" id="string1" name="string1" required>
+        <br>
+        <label for="string2">Enter the second string:</label>
+        <input type="text" id="string2" name="string2" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("stringForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var string1Input = document.getElementById("string1");
+            var string2Input = document.getElementById("string2");
+
+            var string1 = string1Input.value;
+            var string2 = string2Input.value;
+
+            var resultContainer = document.getElementById("result");
+
+            var reversedString2 = reverseString(string2);
+
+            if (string1 === reversedString2) {
+                resultContainer.textContent = "String 1 is equal to the reverse of String 2.";
+            } else {
+                resultContainer.textContent = "String 1 is not equal to the reverse of String 2.";
+            }
+        });
+
+        function reverseString(str) {
+            return str.split('').reverse().join('');
+        }
+    </script>
+
+</body>
+</html>

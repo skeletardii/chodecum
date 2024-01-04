@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenation Example</title>
+    <style>
+        /* Add your CSS styles here if needed */
+    </style>
+</head>
+<body>
+
+    <div id="concatenated"></div>
+
+    <script>
+        var word1 = prompt("Enter the first word:");
+        var word2 = prompt("Enter the second word:");
+
+        var concatenatedWords = `${word1} ${word2}`;
+
+        var concatenatedContainer = document.getElementById("concatenated");
+        concatenatedContainer.innerHTML = `<p>Concatenated Words: ${concatenatedWords}</p>`;
+    </script>
+
+</body>
+</html>

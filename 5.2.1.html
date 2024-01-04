@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <style>
+        /* Add your CSS styles here if needed */
+    </style>
+</head>
+<body>
+
+    <form id="userForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+        <br>
+        <label for="occupation">Occupation:</label>
+        <input type="text" id="occupation" name="occupation" required>
+        <br>
+        <button type="button" onclick="displayUserInformation()">Submit</button>
+    </form>
+
+    <div id="app"></div>
+
+    <script>
+        function displayUserInformation() {
+            var nameInput = document.getElementById("name");
+            var ageInput = document.getElementById("age");
+            var occupationInput = document.getElementById("occupation");
+
+            var name = nameInput.value;
+            var age = ageInput.value;
+            var occupation = occupationInput.value;
+
+            var appContainer = document.getElementById("app");
+            appContainer.innerHTML = `<p>Name: ${name}</p><p>Age: ${age}</p><p>Occupation: ${occupation}</p>`;
+        }
+    </script>
+</body>
+</html>

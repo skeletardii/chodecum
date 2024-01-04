@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Substring Index Calculator</title>
+</head>
+<body>
+
+    <form id="stringForm">
+        <label for="mainString">Enter the main string:</label>
+        <input type="text" id="mainString" name="mainString" required>
+        <br>
+        <label for="substring">Enter the substring:</label>
+        <input type="text" id="substring" name="substring" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("stringForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var mainStringInput = document.getElementById("mainString");
+            var substringInput = document.getElementById("substring");
+
+            var mainString = mainStringInput.value;
+            var substring = substringInput.value;
+
+            var resultContainer = document.getElementById("result");
+
+            var index = mainString.indexOf(substring);
+
+            if (index !== -1) {
+                resultContainer.textContent = `Index of the first occurrence of the substring: ${index}`;
+            } else {
+                resultContainer.textContent = "Substring not found in the main string.";
+            }
+        });
+    </script>
+
+</body>
+</html>

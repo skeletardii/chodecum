@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Slicing</title>
+</head>
+<body>
+
+    <form id="stringForm">
+        <label for="mainString">Enter the main string:</label>
+        <input type="text" id="mainString" name="mainString" required>
+        <br>
+        <label for="startIndex">Enter the start index:</label>
+        <input type="number" id="startIndex" name="startIndex" required>
+        <br>
+        <label for="endIndex">Enter the end index:</label>
+        <input type="number" id="endIndex" name="endIndex" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("stringForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            sbma();
+    
+            
+        });
+        function sbma(){
+            var mainStringInput = document.getElementById("mainString");
+            var startIndexInput = document.getElementById("startIndex");
+            var endIndexInput = document.getElementById("endIndex");
+
+            var mainString = mainStringInput.value;
+            var startIndex = parseInt(startIndexInput.value);
+            var endIndex = parseInt(endIndexInput.value);
+
+            var resultContainer = document.getElementById("result");
+
+            if (isNaN(startIndex) || isNaN(endIndex)) {
+                resultContainer.textContent = "Please enter valid numeric indices.";
+            } else if (startIndex < 0 || endIndex < 0 || startIndex >= mainString.length || endIndex >= mainString.length || startIndex > endIndex) {
+                resultContainer.textContent = "Invalid indices. Ensure they are within the range of the string.";
+            } else {
+                var slicedString = mainString.slice(startIndex, endIndex + 1);
+                resultContainer.textContent = `Sliced String: ${slicedString}`;
+            }
+        }
+        function sleep(ms) {
+          return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        
+        //sleep(100).then(() => { sbma(); });
+        
+    </script>
+
+</body>
+</html>

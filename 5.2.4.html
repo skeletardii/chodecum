@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Recipe Example</title>
+</head>
+<body>
+
+    <div id="recipe"></div>
+
+    <script>
+        var teaSteps = [
+            "Boil water.",
+            "Steep the tea.",
+            "Drink."
+        ];
+        var recipeContainer = document.getElementById("recipe");
+        recipeContainer.innerHTML = `<ol>${teaSteps.map(step => `<li>${step}</li>`).join('')}</ol>`;
+    </script>
+
+</body>
+</html>

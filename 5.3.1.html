@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentence Length Calculator</title>
+</head>
+<body>
+
+    <form id="sentenceForm" onsubmit="calcsenlength()">
+        <label for="sentence">Enter a sentence:</label>
+        <input type="text" id="sentence" name="sentence" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("sentenceForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var sentenceInput = document.getElementById("sentence");
+            var sentence = sentenceInput.value;
+
+            var resultContainer = document.getElementById("result");
+            resultContainer.textContent = `Length of the entered sentence: ${sentence.length} characters`;
+        });
+        function calcsenlength(){
+            
+
+            var sentenceInput = document.getElementById("sentence");
+            var sentence = sentenceInput.value;
+
+            var resultContainer = document.getElementById("result");
+            resultContainer.textContent = `Length of the entered sentence: ${sentence.length} characters`;
+        }
+    </script>
+
+</body>
+</html>

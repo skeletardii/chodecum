@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String to Lowercase Converter</title>
+</head>
+<body>
+
+    <form id="stringForm">
+        <label for="mainString">Enter a string:</label>
+        <input type="text" id="mainString" name="mainString" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("stringForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var mainStringInput = document.getElementById("mainString");
+            var mainString = mainStringInput.value;
+
+            var resultContainer = document.getElementById("result");
+            var lowercaseString = mainString.toLowerCase();
+
+            resultContainer.textContent = `Lowercase String: ${lowercaseString}`;
+        });
+    </script>
+
+</body>
+</html>

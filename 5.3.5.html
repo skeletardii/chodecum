@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Occurrences Counter</title>
+</head>
+<body>
+
+    <form id="occurrencesForm">
+        <label for="mainString">Enter the main string:</label>
+        <input type="text" id="mainString" name="mainString" required>
+        <br>
+        <label for="targetString">Enter the target string:</label>
+        <input type="text" id="targetString" name="targetString" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("occurrencesForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            var mainStringInput = document.getElementById("mainString");
+            var targetStringInput = document.getElementById("targetString");
+
+            var mainString = mainStringInput.value;
+            var targetString = targetStringInput.value;
+
+            var resultContainer = document.getElementById("result");
+
+            var occurrences = countOccurrences(mainString, targetString);
+
+            resultContainer.textContent = `Number of occurrences: ${occurrences}`;
+        });
+
+        function countOccurrences(mainString, targetString) {
+            var count = 0;
+            var index = mainString.indexOf(targetString);
+
+            while (index !== -1) {
+                count++;
+                index = mainString.indexOf(targetString, index + 1);
+            }
+
+            return count;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+Item 1
+1. What is ES6 known as?
+    -ECMAScript 2015
+2. What are the new keywords introduced in ES6 for declaring block-scoped variables?
+    -let and const 
+3. What does block-scoping mean for variables?
+    -Variables are limited to the block they are declared in, such as a loop or an if statement.
+4. Which feature allows you to define concise function expressions without using the function keyword?
+    -Arrow functions
+5. Which operator allows you to combine elements of arrays or objects into a new array or object?
+    -Rest operations
+
+Item 2
+1. What does the rest operator do in function parameter handling?
+    -It collects multiple function arguments into an array.
+2. What is the purpose of using the rest operator in the following function definition?
+    -It returns the sum of all the numbers passed to the function.
+3. Which ES6 feature allows you to specify default values for function parameters?
+    -Default parameters 
+4. What happens if a function with default parameters is called with providing arguments for those parameters?
+    -The function is executed with the default parameter values.
+5. How can you use the shorthand property names in an object literal?
+    -By assigning values directly to the property names.
+
+I got 16/20 here so 2 of these are wrong i think one of them is item 2 number 1 idk
